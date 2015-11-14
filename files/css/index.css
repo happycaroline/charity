@@ -12,7 +12,10 @@ body{
 	z-index: 39;
 	margin-top: -377px;
 }
-
+.item1{
+    background-image:url(../images/banner1.png);
+    min-height:400px;
+}
 .carousel-caption {
 	height: 100%;
 }
@@ -167,4 +170,30 @@ padding: 0
 
 *{
 	outline: 0!important
+}
+
+
+
+
+@media screen and (max-width:780px) {
+    .activity,.works {
+        padding-left:0;
+        padding-right:0;
+    }
+  .modal-open .modal {
+        padding-top: 40px;
+    }
+    #activityModal .modal-dialog,#workModal .modal-dialog {
+        width: 95%;
+    }
+    .activity img {
+        height: auto;
+        width: 100%;
+    }
+    .thumbnail:hover .imgshadow{
+        display: none;
+    }
+    .contact {
+        padding: 50px 80px 50px;
+    }
 }
