@@ -27,7 +27,7 @@ var activityData=[{
 					'files/images/activity1/14.png',
 					'files/images/activity1/15.png'],
 		},{
-			title:'2013年3月5日-3月1 1日，上海多伦现代美术馆',
+			title:'2013年3月5日-3月11日，上海多伦现代美术馆',
 			imgurl:['files/images/activity2/1.png',
 					'files/images/activity2/2.png',
 					'files/images/activity2/3.png',
