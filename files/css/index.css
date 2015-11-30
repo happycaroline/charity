@@ -180,23 +180,48 @@ padding: 0
 	outline: 0!important
 }
 
+.backToTop{
+    padding: 10px;
+    background-color: black;
+    opacity: 0.15;
+    color: white;
+    font-size: xx-large;
+    position: fixed;
+    top: 300px;
+    right: 0;
+    width: 52px;
+    height: 52px;
+    z-index: 10;
+    display: none;
+}
 
-
-
+.col-xs-6{
+    padding: 5px;
+}
 @media screen and (max-width:780px) {
     .item {
-        min-height: 180px;
-        background-size: 650px auto;
+        min-height: 270px;
+        background-size: 976px auto;
+        background-position: 745px;
+    }
+    .btn-default {
+        padding: 2px 5px;
+        font-size: 12px;
     }
     .shadow{
-        height: 180px;
-        margin-top:-180px;
+        height: 270px;
+        margin-top:-270px;
+    }
+    .carousel-caption p:first-child {
+        margin-top: 24vw;
+        font-size: 4vw;
+        white-space: nowrap;
     }
     .activity,.works {
         padding-left:0;
         padding-right:0;
     }
-  .modal-open .modal {
+    .modal-open .modal {
         padding-top: 40px;
     }
     #activityModal .modal-dialog,#workModal .modal-dialog {
