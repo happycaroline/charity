@@ -194,7 +194,9 @@ padding: 0
     z-index: 10;
     display: none;
 }
-
+.museum{
+    margin-bottom: 0;
+}
 .col-xs-6{
     padding: 5px;
 }
@@ -236,5 +238,45 @@ padding: 0
     }
     .contact {
         padding: 50px 80px 50px;
+    }
+    .intro {
+        height: 672px;
+    }
+}
+@media screen and (max-width:1024px){
+    .btn-default {
+        padding: 2px 5px;
+        font-size: 12px;
+    }
+    .shadow{
+        height: 270px;
+        margin-top:-270px;
+    }
+    .carousel-caption p:first-child {
+        font-size: 3vw;
+        white-space: nowrap;
+    }
+    .activity,.works {
+        padding-left:0;
+        padding-right:0;
+    }
+    .modal-open .modal {
+        padding-top: 40px;
+    }
+    #activityModal .modal-dialog,#workModal .modal-dialog {
+        width: 95%;
+    }
+    .activity img {
+        height: auto;
+        width: 100%;
+    }
+    .thumbnail:hover .imgshadow{
+        display: none;
+    }
+    .contact {
+        padding: 50px 80px 50px;
+    }
+    .intro {
+        height: 672px;
     }
 }
