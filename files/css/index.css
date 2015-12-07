@@ -234,7 +234,7 @@ padding: 0
         padding: 50px 80px 50px;
     }
     .intro {
-        height: 672px;
+        height: 690px;
     }
 }
 
@@ -246,11 +246,6 @@ padding: 0
     .shadow{
         height: 270px;
         margin-top:-270px;
-    }
-    .carousel-caption p:first-child {
-        margin-top: 11vw;
-        font-size: 3vw;
-        white-space: nowrap;
     }
     .activity,.works {
         padding-left:0;
@@ -273,6 +268,6 @@ padding: 0
         padding: 50px 80px 50px;
     }
     .intro {
-        height: 672px;
+        height: 690px;
     }
 }

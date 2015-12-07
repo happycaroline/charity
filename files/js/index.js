@@ -24,8 +24,7 @@ var activityData=[{
 					'files/images/activity1/11.png',
 					'files/images/activity1/12.png',
 					'files/images/activity1/13.png',
-					'files/images/activity1/14.png',
-					'files/images/activity1/15.png'],
+					'files/images/activity1/14.png'],
 		},{
 			title:'2013年3月5日-3月11日，上海多伦现代美术馆',
 			imgurl:['files/images/activity2/1.png',
@@ -132,7 +131,6 @@ var activityData=[{
             $('.shadow').css({'height':height+'px','margin-top':-(height)+'px'})
         })
         $(window).scroll(function(){
-        	console.log( document.body.scrollTop)
         	if(document.body.scrollTop>300){
         		$('.backToTop').css('display','block')
         	}
