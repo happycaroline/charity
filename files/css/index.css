@@ -200,6 +200,9 @@ padding: 0
         background-size: 976px auto;
         background-position: 745px;
     }
+    .carousel-caption p {
+        font-size: 3.4vw;
+    }
     .btn-default {
         padding: 2px 5px;
         font-size: 12px;
