@@ -11,7 +11,6 @@
 	<script src="bootstrap/js/bootstrap.js"></script>
 </head>
 <body>
- <div style="position:relative;left:10px;top:10px;height: 100px;width: 200px;background: blue;" id="slider"></div>
 <div class="modal fade" id="activityModal" tabindex="-1" role="dialog" aria-labelledby="activityModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -43,7 +42,7 @@
 
 	  <!-- Wrapper for slides -->
 	  <div class="carousel-inner" role="listbox">
-	    <div class="item active item1">
+	    <div class="item active item1" data-index="0">
 	      <div class="shadow"></div>
 	      <div class="carousel-caption">
 	        <p>伟伟在上海波特曼参加慈善绘画展出活动</p>
@@ -52,7 +51,7 @@
 
 	      </div>
 	    </div>
-	    <div class="item item2">
+	    <div class="item item2" data-index="1">
 	      <div class="shadow"></div>
 	      <div class="carousel-caption">
 	        <p>伟伟在上海波特曼参加慈善绘画展出活动</p>
@@ -61,7 +60,7 @@
 
 	      </div>
 	    </div>
-	    <div class="item item3">
+	    <div class="item item3" data-index="2">
 	      <div class="shadow"></div>
 	      <div class="carousel-caption">
 	        <p>伟伟在上海波特曼参加慈善绘画展出活动</p>
@@ -70,7 +69,7 @@
 
 	      </div>
 	    </div>
-	    <div class="item item4">
+	    <div class="item item4" data-index="3">
 	      <div class="shadow"></div>
 	      <div class="carousel-caption">
 	        <p>伟伟在上海波特曼参加慈善绘画展出活动</p>
@@ -232,60 +231,15 @@
 		<p>邮箱：1405293782@qq.com</p>
 	</div>
 	<script src="files/js/index.js">	</script>
+    <script src="files/js/jgestures.js"></script>
     <script>
-     var slider = {
-         //判断设备是否支持touch事件
-         touch: ('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch,
-         slider: document.getElementById('slider'),
-         //事件
-         events: {
-             slider: this.slider,     //this为slider对象
-             handleEvent: function (event) {
-                 var self = this;     //this指events对象
-                 if (event.type == 'touchstart') {
-                     self.start(event);
-                 } else if (event.type == 'touchmove') {
-                     self.move(event);
-                 } else if (event.type == 'touchend') {
-                     self.end(event);
-                 }
-             },
-             //touchstart
-             start: function (event) {
-                 event.preventDefault();                 //阻止浏览器的默认事件
-                 var touch = event.targetTouches[0];     //touches数组对象获得屏幕上所有的touch，取第一个touch
-                 startPos = {x: touch.clientX, y: touch.clientY};    //取第一个touch的坐标值
-                 sliderX = parseInt(this.slider.style.left);            //获取触摸时滑动块的初始位置
-                 sliderY = parseInt(this.slider.style.top);
-                 this.slider.addEventListener('touchmove', this, false);
-                 this.slider.addEventListener('touchend', this, false);
-             },
-             //touchmove
-             move: function (event) {
-                 //当屏幕有多个touch或者页面被缩放过，就不执行move操作
-                 if (event.targetTouches.length > 1 || event.scale && event.scale !== 1) return;
-                 var touch = event.targetTouches[0];
-                 endPos = {x: touch.clientX - startPos.x, y: touch.clientY - startPos.y};                 //获取所移动的距离
-                 event.preventDefault();      //阻止触摸事件的默认行为，即阻止滚屏
-                 this.slider.style.left = (sliderX + endPos.x ) + 'px';
-                 this.slider.style.top = (sliderY + endPos.y) + 'px';
- 
-             },
-             //滑动释放
-             end: function (event) {
-                 //解绑事件
-                 this.slider.removeEventListener('touchmove', this, false);
-                 this.slider.removeEventListener('touchend', this, false);
-             }
-         },
- 
-         //初始化
-         init: function () {
-             var self = this;     //this指slider对象
-             if (!!self.touch) self.slider.addEventListener('touchstart', self.events, false);    //addEventListener第二个参数可以传一个对象，会调用该对象的handleEvent属性
-         }
-     };
-     slider.init();
- </script>
+        $('.item').bind('swipeleft',function(e){
+            var index=$(e.target).attr('data-index');
+            if(index<3){
+                $('[data-slide-to='+index+1+']').click()
+            }
+            debugger
+        });
+    </script>
 </body>
 </html>
