@@ -234,11 +234,16 @@
     <script src="files/js/jgestures.js"></script>
     <script>
         $('.item').bind('swipeleft',function(e){
-            var index=$(e.target).attr('data-index');
+            var index=parseInt($(e.target).attr('data-index'))+1;
             if(index<3){
-                $('[data-slide-to='+index+1+']').click()
+                $('[data-slide-to='+index+']').click()
             }
-            debugger
+        });
+        $('.item').bind('swiperight',function(e){
+            var index=parseInt($(e.target).attr('data-index'))-1;
+            if(index>0){
+                $('[data-slide-to='+index+']').click()
+            }
         });
     </script>
 </body>
