@@ -233,12 +233,17 @@
 	<script src="files/js/index.js">	</script>
     <script src="files/js/jgestures.js"></script>
     <script>
-        $('.item').bind('swipeleft',function(e){
-            var index=$(e.target).attr('data-index');
-            if(index<3){
-                $('[data-slide-to='+index+1+']').click()
+        $('.item').on('swipeleftdown',function(e){
+            var index=parseInt($(e.target).attr('data-index'))+1;
+            if(index<4){
+                $('[data-slide-to='+index+']').click()
             }
-            debugger
+        });
+        $('.item').on('swiperightdown',function(e){
+            var index=parseInt($(e.target).attr('data-index'))-1;
+            if(index>-1){
+                $('[data-slide-to='+index+']').click()
+            }
         });
     </script>
 </body>
