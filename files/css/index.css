@@ -251,7 +251,7 @@ padding: 0
         padding: 50px 80px 50px;
     }
     .intro {
-        height: 690px;
+        padding: 0 15px;
     }
 }
 
@@ -285,6 +285,6 @@ padding: 0
         padding: 50px 80px 50px;
     }
     .intro {
-        height: 690px;
+        padding: 0 15px;
     }
 }
