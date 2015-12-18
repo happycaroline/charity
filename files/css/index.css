@@ -54,7 +54,7 @@ body{
 }
 .touxiang{
 	margin: 0 auto;
-	padding-top: 5.5vw;
+	padding-top: 3.5vw;
 	padding-bottom: 2.5vw;
 }
 .intro h4{
@@ -251,7 +251,7 @@ padding: 0
         padding: 50px 80px 50px;
     }
     .intro {
-        height: 690px;
+        padding: 0 15px;
     }
 }
 
@@ -285,6 +285,6 @@ padding: 0
         padding: 50px 80px 50px;
     }
     .intro {
-        height: 690px;
+        padding: 0 15px;
     }
 }
