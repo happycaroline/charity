@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" href="files/css/index.css">
 	<script src="files/js/jquery-1.11.3.min.js"></script>
+    <script src="files/js/jquery.mobile-1.4.5.min.js"></script>
 	<script src="bootstrap/js/bootstrap.js"></script>
 </head>
 <body>
@@ -295,20 +296,24 @@
 		<p>邮箱：1405293782@qq.com</p>
 	</div>
 	<script src="files/js/index.js">	</script>
-    <script src="files/js/jgestures.js"></script>
     <script>
-        $('.item').on('swipeleftdown',function(e){
-            var index=parseInt($(e.target).attr('data-index'))+1;
+
+
+        $( ".item" ).on( "swipeleft", function(e){
+            var index=parseInt($(e.target).parent().attr('data-index'))+1;
             if(index<4){
                 $('[data-slide-to='+index+']').click()
             }
-        });
-        $('.item').on('swiperightdown',function(e){
-            var index=parseInt($(e.target).attr('data-index'))-1;
+
+        } );
+        $( ".item" ).on( "swiperight", function(e){
+            var index=parseInt($(e.target).parent().attr('data-index'))-1;
             if(index>-1){
                 $('[data-slide-to='+index+']').click()
             }
-        });
+
+        } );
+
     </script>
 </body>
 </html>
