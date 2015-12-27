@@ -3,6 +3,10 @@ body{
 }
 .item img{
     width:100%;
+
+}
+.item{
+    background-size: 100%;
 }
 .shadow{
 	background-color: #000;
@@ -35,10 +39,10 @@ body{
 	margin-top: 5vw;
 	margin-bottom: 1.9vw;
 }
-.btn-default{
+.btn-default,.btn-default:active{
 	margin-top: 1.9vw;
 	background: transparent;
-	color: white;
+	color: white!important;
 }
 .btn-default:hover,.btn-default:focus{
 	background-color: transparent;
@@ -54,7 +58,7 @@ body{
 }
 .touxiang{
 	margin: 0 auto;
-	padding-top: 3.5vw;
+	padding-top: 4.5vw;
 	padding-bottom: 2.5vw;
 }
 .intro h4{
@@ -100,6 +104,7 @@ body{
 }
 #activityModal .modal-dialog{
 	width: 800px;
+    margin-top: 100px;
 }
 .content{
 	font-size: 12px;
@@ -153,6 +158,7 @@ body{
 	display: none;
     margin-right: auto;
     margin-left: auto;
+    border-radius: 4px;
 }
 .activity img{
 	height: 180px;
@@ -167,8 +173,13 @@ padding: 0
 }
 #workModal .modal-dialog{
 	width: 1024px;
+    margin-top: 100px;
 }
-
+.worktitle{
+    font-size: 24px;
+    line-height: 50px;
+    margin-left: 10px;
+}
 *{
 	outline: 0!important
 }
@@ -286,5 +297,8 @@ padding: 0
     }
     .intro {
         padding: 0 15px;
+    }
+    .touxiang {
+      padding-top: 40px;
     }
 }
