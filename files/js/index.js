@@ -32,8 +32,7 @@ var activityData=[{
 					'files/images/activity2/3.png',
 					'files/images/activity2/4.png',
 					'files/images/activity2/5.png',
-					'files/images/activity2/6.png',
-					'files/images/activity2/7.png'],
+					'files/images/activity2/6.png']
 		},{
 			title:'2013年4月2日莫干山路华府艺术空间展出',
 			content:['2013年3月26日---4月6日, 伟伟参加了 “爱. 让星空蓝起来 兰丝带在行动”自闭症儿童艺术展示, 自闭症儿童画展在上海莫干山路50号4号楼217室上海华府艺术空间举行。',
@@ -41,22 +40,19 @@ var activityData=[{
 			imgurl:['files/images/activity3/1.png',
 					'files/images/activity3/2.png',
 					'files/images/activity3/3.png',
-					'files/images/activity3/4.png',
-					'files/images/activity3/5.png'],
+					'files/images/activity3/4.png'],
 		},{
 			title:'2013年5月18日“上海市民文化节书画展”',
 			imgurl:['files/images/activity4/1.png',
 					'files/images/activity4/2.png',
 					'files/images/activity4/3.png',
-					'files/images/activity4/4.png',
-					'files/images/activity4/5.png'],
+					'files/images/activity4/4.png'],
 		},{
 			title:'2013年7月27日，伟伟作品与外滩Swatch艺术中心访问艺术家一起展出',
 			imgurl:['files/images/activity5/1.png',
 					'files/images/activity5/2.png',
 					'files/images/activity5/3.png',
-					'files/images/activity5/4.png',
-					'files/images/activity5/5.png'],
+					'files/images/activity5/4.png'],
 		},{
 			title:'2014年3月1日伟伟在上海波特曼参加慈善绘画展出活动',
 			imgurl:['files/images/activity6/1.png',
@@ -118,8 +114,8 @@ var activityData=[{
 
 		$('#workModal').on('show.bs.modal', function (event) {
 		  var imgurl = $(event.relatedTarget).attr("data-src") ;
-
-		  var html='<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><img src="'+imgurl+'" alt="" class="img-responsive">'
+		  var title = $(event.relatedTarget).attr("data-title") ;
+		  var html='<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><p class="worktitle">'+title+'</p><img src="'+imgurl+'" alt="" class="img-responsive">'
 		  var width=$(html).width();
 		 
 		  $('#workModal .modal-body').html(html)
