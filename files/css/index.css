@@ -1,6 +1,9 @@
 body{
 	font-family: "微软雅黑"
 }
+.ui-loader{
+    display: none;
+}
 .item img{
     width:100%;
 
