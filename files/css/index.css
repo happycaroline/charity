@@ -5,9 +5,7 @@ body{
     width:100%;
 
 }
-.item{
-    background-size: 100%;
-}
+
 .shadow{
 	background-color: #000;
 	opacity: 0.5;
