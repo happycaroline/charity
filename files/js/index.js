@@ -1,5 +1,8 @@
 
-var height=$('.item img').height();
+
+
+$(function(){
+	var height=$('.item img').height();
 $('.shadow').css({'height':height+'px','margin-top':-(height)+'px'})
 var activityData=[{
 			title:'那个世界没有我们 唯有一笔一画陪伴',
@@ -114,19 +117,16 @@ var activityData=[{
 
 		$('#workModal').on('show.bs.modal', function (event) {
 		  var imgurl = $(event.relatedTarget).attr("data-src") ;
-		  var title = $(event.relatedTarget).attr("data-title") ;
+		  var title = $(event.relatedTarget).attr("title") ;
 		  var html='<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><p class="worktitle">'+title+'</p><img src="'+imgurl+'" alt="" class="img-responsive">'
 		  var width=$(html).width();
 		 
 		  $('#workModal .modal-body').html(html)
 		})
-
-
-        $(window).resize(function(){
+	$(window).resize(function(){
             var height=$('.item img').height();
             $('.shadow').css({'height':height+'px','margin-top':-(height)+'px'})
-        })
-        $(window).scroll(function(){
+        }).scroll(function(){
         	if(document.body.scrollTop>300){
         		$('.backToTop').css('display','block')
         	}
@@ -134,3 +134,19 @@ var activityData=[{
         		$('.backToTop').css('display','none')
         	}
         })
+        $( ".item" ).on( "swipeleft", function(e){
+            var index=parseInt($(e.target).parent().attr('data-index'))+1;
+            if(index<4){
+                $('[data-slide-to='+index+']').click()
+            }
+
+        }).on( "swiperight", function(e){
+            var index=parseInt($(e.target).parent().attr('data-index'))-1;
+            if(index>-1){
+                $('[data-slide-to='+index+']').click()
+            }
+
+        } );
+
+})
+        
